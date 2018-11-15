@@ -28,7 +28,21 @@ router.post('/', function(req, res) {
 	console.log(req.body.github);
 	const pythonProcess = spawn('python', ["./importRequests.py", req.body.github]);
 	pythonProcess.stdout.on('data', (data) => {
+
+
 		console.log(data.toString());
+
+
+
+		//var uint8arrayToString = function(data){
+		//	return String.fromCharCode.apply(null, data);
+		//}
+		//var follow = (uint8arrayToString(data));
+		//console.log(follow);
+
+
+		//var followers = (data.toString());
+		//console.log(followers);
 	});
 	res.render('../public/page/home', {});
 });

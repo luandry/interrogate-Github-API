@@ -14,8 +14,10 @@ data = r.json()
 followers = data["followers"]
 following = data["following"]
 
-print(followers)
-print(following)
+follow = [followers, following]
+
+print(follow)
+#print (1)
 sys.styout.flush()
 
 ## Data to plot
