@@ -6,6 +6,8 @@ const ejs = require('ejs');
 const bodyParser = require("body-parser");
 const request = require("request")
 const router = express.Router();
+const spawn = require("child_process").spawn;
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -19,6 +21,15 @@ app.set('view engine', 'ejs');
 
 //Define Routes below
 router.get('/', function(req, res) {
+	res.render('../public/page/home', {});
+});
+
+router.post('/', function(req, res) {
+	console.log(req.body.github);
+	const pythonProcess = spawn('python', ["./importRequests.py", req.body.github]);
+	pythonProcess.stdout.on('data', (data) => {
+		console.log(data.toString());
+	});
 	res.render('../public/page/home', {});
 });
 
