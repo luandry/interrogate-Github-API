@@ -1,0 +1,31 @@
+{
+  "name": "luanserver",
+  "version": "1.0.0",
+  "description": "This is my first server! Awesome!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luandry/interrogate-Github-API.git"
+  },
+  "author": "Luan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luandry/interrogate-Github-API/issues"
+  },
+  "homepage": "https://github.com/luandry/interrogate-Github-API#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "express": "^4.16.0",
+    "ejs": "^2.2.0",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "body-parser": "^1.18.3",
+    "node-fetch": "^2.2.0"
+  }
+}
