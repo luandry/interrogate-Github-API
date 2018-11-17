@@ -30,7 +30,13 @@ router.post('/', function(req, res) {
 	pythonProcess.stdout.on('data', (data) => {
 
 
+		
+	
+
 		console.log(data.toString());
+	
+
+	
 
 
 
